@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            /* background-image: url(Images/reg\ bg.png);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover; */
+            background-color: gainsboro;
+            margin: 0;
+            padding: 20px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        h1 {
+            text-shadow: 2px 2px 4px blue;
+            color: black;
+            animation-name: sample;
+            animation-duration: 4s;
+            animation-direction: reverse;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            text-align: center;
+            font-size: 30px;
+            margin: 20px 0; /* Spacing above and below */
+        }
+
+        @keyframes sample {
+            0% { color: crimson; }
+            25% { color: violet; }
+            50% { color: white; }
+            75% { color: rgba(21, 59, 4, 0.918); }
+            100% { color: yellow; }
+        }
+
+        h1:hover {
+            text-shadow: 2px 2px 4px yellow;
+            color: red;
+        }
+
+        a:link, a:visited {
+            color: blue;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color:magenta;
+            /* background: linear-gradient(rgb(80, 71, 40), rgb(5, 243, 5), rgb(14, 118, 159)); */
+            border-radius: 5px;
+        }
+
+        a.active {
+            color: black;
+        }
+
+        nav {
+            background-color: white;
+            padding: 12px;
+            border-radius: 30px;
+            box-shadow: 0 0 22px white;
+            text-align: center; /* Center nav items */
+            margin-bottom: 20px; /* Space below the nav */
+        }
+        nav a {
+            font-size: 20px;
+            text-decoration: none;
+            background-color: transparent;
+            padding: 10px 15px;
+            font-weight: bold;
+            color: blue;
+            margin: 0 10px; /* Add space between links */
+        }
+
+        .login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #5cb85c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.signup-link a {
+    color: #5cb85c;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .login-container {
+        max-width: 90%;
+        margin: 50px auto;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    input {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+}
+    </style>
+</head>
+<body>
+    <center>
+        <div class="aa">
+            <img src="Images/loggo.jpg" style="border-radius: 15px;" alt="" width="200px" height="130px">
+        </div>
+        <h1>
+            <img src="Images/login icon.png" style="vertical-align: middle; position: relative;" width="25" height="22" alt="">Login
+        </h1>
+   
+        <nav>
+            <a href="index.html"><b><img src="Images/home icon.png" style="vertical-align:text-top;position: relative;" width="22" height="25" alt="">Home</b></a>
+            <a href="Products.html"><b><img src="Images/product icon.png"  style="vertical-align:text-top;position: relative;" width="25" height="20" alt="" alt="">Products</b></a>
+            <a href="Reg.html"><b><img src="Images/register icon.png" width="22" height="25" style="vertical-align: text-top;position: relative;">Register</b></a>
+            <a href="newlogin.html" class="active"><b><img src="Images/login icon.png" style="vertical-align: middle; position: relative;" width="22" height="20" alt="">Login</b></a>
+            <a href="Contact.html"><b><img src="Images/contact.png" style="vertical-align: middle; position: relative;" width="20" height="17" alt="">Contact</b></a>
+            <a href="cart.html"><b><img src="Images/cart.icon.png" style="vertical-align:text-top;position: relative;" width="27" height="22" alt="">Cart</b></a>
+        </nav>
+
+        <div class="login-container">
+            <h2>Login Form</h2>
+            <form class="login-form">
+                <div class="form-group">
+                    <label for="email"><svg xmlns="http://www.w3.org/2000/svg" style="vertical-align: bottom;" width="16" height="16" fill="currentColor" class="bi bi-envelope-at-fill" viewBox="0 0 16 16">
+                        <path d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2zm-2 9.8V4.698l5.803 3.546zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.5 4.5 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586zM16 9.671V4.697l-5.803 3.546.338.208A4.5 4.5 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671"/>
+                        <path d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791"/>
+                      </svg> Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password"><img  src="Images/passwordicon.png" alt="" width="19" height="19" style="vertical-align: bottom;">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" style="cursor: pointer; width: 35%;margin-left: 35%;" onclick="alert('Logged In Successfully')">Login</button>
+                <p class="signup-link">Don't have an account? <a href="Reg.html">Register</a></p>
+            </form>
+        </div>
+    </center>
+
+    <center>
+        <hr>
+        <h3>@copyrights2024</h3>
+        <hr>
+    </center>
+</body>
+</html>

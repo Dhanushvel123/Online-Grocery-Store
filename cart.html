@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+
+<body>
+    <center>
+        <img src="Images/loggo.jpg" style="border-radius: 15px;" alt="" width="200px" height="130px">
+        <h1><img src="Images/cart.icon.png" style="vertical-align:text-top;padding-bottom: 20px;position: relative;" width="40" height="30" alt=""> Cart</h1>
+
+        <nav>
+            <a href="index.html"><img src="Images/home icon.png" style="vertical-align:text-top;position: relative;" width="22" height="25" alt="">Home</a>
+            <a href="Products.html"><img src="Images/product icon.png"  style="vertical-align:text-top;position: relative;" width="25" height="20" alt="" alt="">Products</a>
+            <a href="Reg.html"><img src="Images/register icon.png" width="25" height="23" style="vertical-align: text-top; position: relative;">Register</a>
+            <a href="newlogin.html"><img src="Images/login icon.png" style="vertical-align: middle; position: relative;" width="22" height="20" alt="">Login</a>
+            <a href="Contact.html"><img src="Images/contact.png" style="vertical-align: middle; position: relative;" width="20" height="17" alt="">Contact</a>
+            <a href="cart.html" class="active"><img src="Images/cart.icon.png" style="vertical-align:text-top;position: relative;" width="27" height="22" alt="">Cart</a>
+        </nav>
+        <br><br>
+
+        <section class="cart-container">
+            <h2>Your Shopping Cart</h2>
+            <div class="cart-item">
+                <div class="item-details">
+                    <div>
+                        <h3 style="color: blue;">PRODUCT</h3>
+                    </div>
+                </div>
+                <div class="item-quantity">
+                    <p style="font-weight: bold;color: blue;">QUANTITY</p>
+                </div>
+                <div class="item-price">
+                    <p style="font-weight: bold;color: blue;">PRICE</p>
+                </div>
+                <div class="remove-item">
+                    <p style="font-weight: bold;color: blue;">ACTION</p>
+                </div>
+            </div>
+            <div class="cart-item">
+                <div class="item-details">
+                    <img src="Images/z cucumb.webp" alt="Cucumber">
+                    <div>
+                        <h3>Cucumber</h3>
+                        <i>(5 KG)</i>
+                        <p>Price: ₹280</p>
+                    </div>
+                </div>
+                <div class="item-quantity">
+                    <button class="quantity-btn">-</button>
+                    <input type="number" value="2" min="1">
+                    <button class="quantity-btn">+</button>
+                </div>
+                <div class="item-price">
+                    <p>₹560.00</p>
+                </div>
+                <div class="remove-item">
+                    <button class="remove-btn">Remove</button>
+                </div>
+            </div>
+
+            <div class="cart-item">
+                <div class="item-details">
+                    <img src="Images/z apple.jpeg" alt="Apple">
+                    <div>
+                        <h3>Apple</h3>
+                        <i>(2 KG)</i>
+                        <p>Price: ₹95</p>
+                    </div>
+                </div>
+                <div class="item-quantity">
+                    <button class="quantity-btn">-</button>
+                    <input type="number" value="3" min="1">
+                    <button class="quantity-btn">+</button>
+                </div>
+                <div class="item-price">
+                    <p>₹285.00</p>
+                </div>
+                <div class="remove-item">
+                    <button class="remove-btn">Remove</button>
+                </div>
+            </div>
+
+            <div class="cart-item">
+                <div class="item-details">
+                    <img src="Images/z juice.jpg" alt="Juice">
+                    <div>
+                        <h3>Juice</h3>
+                        <i>(3 LTR)</i>
+                        <p>Price: ₹200</p>
+                    </div>
+                </div>
+                <div class="item-quantity">
+                    <button class="quantity-btn">-</button>
+                    <input type="number" value="4" min="1">
+                    <button class="quantity-btn">+</button>
+                </div>
+                <div class="item-price">
+                    <p>₹800.00</p>
+                </div>
+                <div class="remove-item">
+                    <button class="remove-btn">Remove</button>
+                </div>
+            </div>
+
+            <div class="cart-item">
+                <div class="item-details">
+                    <img src="Images/z soap.jpg" alt="Cloth detergent">
+                    <div>
+                        <h3>Cloth detergent</h3>
+                        <i>(5 LTR)</i>
+                        <p>Price: ₹520</p>
+                    </div>
+                </div>
+                <div class="item-quantity" style="margin-right: 100px;">
+                    <button class="quantity-btn">-</button>
+                    <input type="number" value="1" min="1">
+                    <button class="quantity-btn">+</button>
+                </div>
+                <div class="item-price">
+                    <p>₹520.00</p>
+                </div>
+                <div class="remove-item">
+                    <button class="remove-btn">Remove</button>
+                </div>
+            </div>
+
+            <div class="cart-summary">
+                <p>Total Items: 10</p>
+                <p>Total Price: ₹2165.00</p>
+                <button class="checkout-btn" onclick="alert('Thanks for Shopping')">Proceed to Buy</button>
+            </div>
+        </section>
+    </center>
+   
+    <br>
+    <footer>
+     <div class="footer-container">
+       <div class="footer-column">
+         <h4>Customer Service</h4>
+         <ul>
+           <li><a href="#">Help Center</a></li>
+           <li><a href="#">FAQs</a></li>
+           <li><a href="Contact.html">Contact Us</a></li>
+         </ul>
+       </div>
+   
+       <div class="footer-column">
+         <h4>Company</h4>
+         <ul>
+           <li><a href="index.html">Home</a></li>
+           <li><a href="Products.html">Products</a></li>
+           <li><a href="Reg.html">Register</a></li>
+           <li><a href="newlogin.html">Login</a></li>
+           <li><a href="cart.html">Cart</a></li>
+         </ul>
+       </div>
+   
+       <div class="footer-column">
+         <h4>Legal</h4>
+         <ul>
+           <li><a href="#">Privacy Policy</a></li>
+           <li><a href="#">Terms & Conditions</a></li>
+           <li><a href="#">Return Policy</a></li>
+         </ul>
+       </div>
+   
+       <div class="footer-column">
+         <h4>Shop</h4>
+         <ul>
+           <li><a href="Products.html">Fruits & Vegetables</a></li>
+           <li><a href="Products.html">Dairy & Eggs</a></li>
+           <li><a href="Products.html">Beverages</a></li>
+           <li><a href="Products.html">Snacks</a></li>
+         </ul>
+       </div>
+   
+       <div class="footer-column">
+         <h4>Follow Us</h4>
+         <ul class="social-media">
+            <li style="cursor: pointer;"  onclick="window.location.href='https://web.whatsapp.com/';"><img src="Images/whatsapp color logo.png" style="vertical-align:middle;opacity: 1;" alt="Click to Navigate">Whatsapp</li>
+            <li style="cursor: pointer;"  onclick="window.location.href='https://www.facebook.com/';" ><img src="Images/facebook color logo.png " style="vertical-align:middle;opacity: 1;"alt="Click to Navigate">Facebook</li>
+            <li style="cursor: pointer;" onclick="window.location.href='https://www.instagram.com/?hl=en';"><img src="Images/instagram-color  logo.png" style="vertical-align:middle;opacity: 1;"alt="Click to Navigate">Instagram</li>
+          </ul>
+       </div>
+   
+       <div class="footer-column">
+         <h4>Download Our App</h4>
+         <div class="app-links">
+            <a href="https://play.google.com/store/games?hl=en" style="text-decoration: none;color: white;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-google-play" viewBox="0 0 16 16">
+              <path d="M14.222 9.374c1.037-.61 1.037-2.137 0-2.748L11.528 5.04 8.32 8l3.207 2.96zm-3.595 2.116L7.583 8.68 1.03 14.73c.201 1.029 1.36 1.61 2.303 1.055zM1 13.396V2.603L6.846 8zM1.03 1.27l6.553 6.05 3.044-2.81L3.333.215C2.39-.341 1.231.24 1.03 1.27"/>
+            </svg> Google Play Store</a>
+            <br>
+            <br>
+            <a href="https://www.microsoft.com/en-in/store/top-free/apps/pc" style="text-decoration: none;color: white;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-microsoft" viewBox="0 0 16 16">
+              <path d="M7.462 0H0v7.19h7.462zM16 0H8.538v7.19H16zM7.462 8.211H0V16h7.462zm8.538 0H8.538V16H16z"/>
+            </svg> Microsoft App Store</a>
+          </div>
+       </div>
+     </div>
+   
+     <div class="footer-bottom">
+       <p> &copy; @copyrights2024 project.</p>
+     </div>
+   </footer>
+</body>
+
+</html>

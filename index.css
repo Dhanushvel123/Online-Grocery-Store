@@ -1,0 +1,803 @@
+h1{
+    height: 50px;
+    width: 250px;
+    text-shadow: 2px 2px 5px darkorange;
+    text-align: center;
+    margin-left: 40%;
+    font-size: 30px;
+    color: purple;
+}
+@media screen and (max-width:425px) {
+  h1{
+    margin-left: 20%;
+  }
+}
+h1:hover{
+    color: crimson; 
+    text-shadow: 2px 2px 4px yellow;
+}
+h2{
+    text-align: center;
+    background-color: white;
+}
+h2:hover{
+  
+    background-color: white;
+  border-radius: 15px;
+}
+#dis{
+    background-color: white;
+    font-size: 20px;
+}
+#dis:hover{
+    background-color: white;
+    color: black;
+    box-shadow: none;
+    border: none;
+    font-family:cursive;
+    font-size: 18px;
+}
+
+body{
+    padding-bottom: 150px;
+    margin-left: 0;
+    margin-right: 0;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+a:link {
+  color: blue;
+}
+/* Visited link */
+a:visited {
+  color: green;
+}
+/* Mouse over link */
+nav {
+  background-color: transparent;
+  padding: 12px;
+  text-align: center;
+}
+
+nav a {
+  font-size: 20px;
+  text-decoration: none;
+  background-color: transparent;
+  padding: 10px 15px;
+  font-weight: bolder;
+  color: blue;
+  display: inline-block;
+  transition: all 0.3s ease;
+  margin: 0 10px; /* Add space between links */
+}
+
+nav a:hover {
+  color: red;
+  /* background: linear-gradient(rgb(80, 71, 40), rgb(5, 243, 5), rgb(14, 118, 159)); */
+  border-radius: 5px;
+}
+
+/* Active link */
+a.active {
+  padding: 12px 20px;
+  color: orangered;
+  border-radius: 7px;
+}
+
+/* Media Queries */
+/* For Tablets and smaller desktops */
+@media (max-width: 1024px) {
+  nav a {
+      font-size: 18px; /* Slightly smaller font for tablets */
+      padding: 8px 12px; /* Adjust padding */
+  }
+}
+
+/* For large mobile screens (max-width: 768px) */
+@media (max-width: 768px) {
+  nav a {
+      font-size: 16px; /* Smaller font for mobile */
+      padding: 6px 10px;
+      margin: 0 8px; /* Reduce spacing between links */
+  }
+}
+
+/* For small mobile screens (max-width: 480px) */
+@media (max-width: 480px) {
+  nav {
+      display: flex;
+      flex-wrap: wrap; /* Allow items to wrap if needed */
+      justify-content: center; /* Center the navbar items */
+      padding:5px 8px;
+  }
+
+  nav a {
+      font-size: 14px; /* Smaller font size for small mobile */
+      padding: 6px 8px; /* Smaller padding */
+      margin: 5px 5px; /* Reduce spacing between links */
+  }
+}
+
+/* Optional: To handle very small screens or if wrapping occurs */
+@media (max-width: 360px) {
+  nav a {
+      font-size: 12px; /* Even smaller font for very small screens */
+      padding: 5px 6px;
+      margin: 4px; /* Adjust spacing for very tight spaces */
+  }
+}
+img:hover{
+opacity: 0.5;
+}
+.logo img{
+width: 14%;
+height: 150px;
+}
+
+.m{
+ position: relative;
+  height: 70%;
+}
+.m img{
+  border-radius: 10%;
+}
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .mon {
+      width: 50%; /* Show 2 images at once on tablets */
+  }
+
+  .text-overlay {
+      font-size: 25px;
+      left: 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .mon {
+      width: 100%; /* Show 1 image at once on mobile */
+  }
+
+  .text-overlay {
+      font-size: 20px;
+      left: 5%;
+  }
+}
+
+p~.review-section{
+
+font-size: 25px;
+   text-align: center;
+   line-height: 15px;
+   border-radius: 15px;
+   animation-name: min;
+   animation-duration: 4s;
+   animation-direction: alternate;
+   position: relative;
+   animation-iteration-count: infinite;
+   animation-timing-function:ease-in-out;
+  
+   }
+ 
+   @keyframes min{
+       0%{color:crimson; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; }
+       25%{color: darkgreen;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; }
+       50%{color: navy;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+       75%{color: deeppink;font-family: 'Times New Roman', Times, serif; }
+       100%{color: black;font-family: monospace;}   
+}
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.aa {
+  
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  padding-top: 30px;
+  text-align: center;
+ 
+  width: 100%;
+}
+
+.aa > div {
+  background-color: white;
+  font-size: 18px;
+  width: 285px; /* Default width */
+  margin:10px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 0 10px red;
+  animation-name: bb;
+  animation-duration: 4s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+@keyframes aa {
+  0% {
+      box-shadow: 0 0 10px red;
+  }
+  25% {
+      box-shadow: 0 0 10px blue;
+  }
+  50% {
+      box-shadow: 0 0 10px green;
+  }
+  75% {
+      box-shadow: 0 0 10px magenta;
+  }
+  100% {
+      box-shadow: 0 0 10px mediumspringgreen;
+  }
+}
+
+.aa > div:hover {
+  color: blue;
+  box-shadow: 0 0 30px purple;
+  transform: scale(1.05);
+}
+
+img {
+  max-width: 100%; /* Make images responsive */
+  height: auto;    /* Maintain aspect ratio */
+}
+
+ul, ol {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  font-family: cursive;
+  margin: 10px 0;
+}
+
+b, strong {
+  font-family: 'Lucida Sans', Geneva, sans-serif;
+}
+
+mark {
+  background-color: white;
+  color: navy;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Large screens (desktops, 4 items in a row) */
+@media (min-width: 1025px) {
+  .aa {
+      justify-content: space-evenly;
+  }
+}
+
+/* Medium screens (tablets, 2 items per row) */
+@media (max-width: 1024px) {
+  .aa {
+      justify-content: space-around;
+  }
+
+  .aa > div {
+      width: 45%; /* Two items per row */
+  }
+}
+
+/* Small screens (phones, 1 item per row) */
+@media (max-width: 768px) {
+  .aa {
+      justify-content: center;
+  }
+
+  .aa > div {
+      width: 90%; /* Single item per row */
+      margin: 10px 0;
+  }
+}
+
+/* Very small screens (extra small phones) */
+@media (max-width: 480px) {
+  .aa {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .aa > div {
+      width: 100%; /* Full width for extra small screens */
+      margin: 10px 0;
+  }
+
+  .aa img {
+      width: 60px; /* Smaller images for mobile screens */
+      height: 60px;
+  }
+
+  .aa li, .bb ol li {
+      font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}
+
+.bb {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap */
+  justify-content: space-evenly;
+  padding: 30px;
+}
+
+.bb > div {
+  background-color: white;
+  width: 210px;
+  height: 287px;
+  margin: 10px;
+  font-size: 18px;
+  text-align: center;
+  line-height: 15px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px red;
+  animation-name: bb;
+  animation-duration: 4s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+
+@keyframes bb {
+  0% { box-shadow: 0 0 10px red; }
+  25% { box-shadow: 0 0 10px blue; }
+  50% { box-shadow: 0 0 10px green; }
+  75% { box-shadow: 0 0 10px magenta; }
+  100% { box-shadow: 0 0 10px mediumspringgreen; }
+}
+
+.bb li {
+  list-style-type: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+}
+
+.bb > div:hover {
+  color: crimson;
+  font-family: fantasy;
+  box-shadow: 0 0 35px yellow;
+  transform: scale(1.05);
+}
+
+.bb > div mark:hover {
+  color: orangered;
+}
+
+/* Media Queries for Responsive Layout */
+
+/* Large screens (4 items per row) */
+@media (min-width: 1025px) {
+  .bb > div {
+      width: 23%; /* Four items per row */
+  }
+}
+
+/* Medium screens (2 items per row) */
+@media (max-width: 1024px) {
+  .bb > div {
+      width: 45%; /* Two items per row */
+  }
+}
+
+/* Small screens (1 item per row) */
+@media (max-width: 768px) {
+  .bb > div {
+      width: 90%; /* Full width for small screens */
+      margin: 20px 0; /* Add margin for spacing between items */
+  }
+}
+
+ul, ol {
+  list-style-type: none;
+  padding: 0;
+}
+
+b, strong {
+  font-family: 'Lucida Sans', Geneva, sans-serif;
+}
+
+mark {
+  background-color: white;
+  color: navy;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.cc {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap */
+  justify-content: space-evenly;
+  padding: 30px;
+}
+
+.cc > div {
+  background-color: white;
+  width: 210px;
+  height: 315px;
+  margin: 10px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 15px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px red;
+  animation-name: cc;
+  animation-duration: 4s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+
+@keyframes cc {
+  0% { box-shadow: 0 0 10px red; }
+  25% { box-shadow: 0 0 10px blue; }
+  50% { box-shadow: 0 0 10px green; }
+  75% { box-shadow: 0 0 10px magenta; }
+  100% { box-shadow: 0 0 10px mediumspringgreen; }
+}
+
+.cc li {
+  list-style-type: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+}
+
+.cc > div:hover {
+  color: crimson;
+  font-family: fantasy;
+  box-shadow: 0 0 35px yellow;
+  transform: scale(1.05);
+}
+
+.cc > div mark:hover {
+  color: orangered;
+}
+
+/* Media Queries for Responsive Layout */
+
+/* Large screens (4 items per row) */
+@media (min-width: 1025px) {
+  .cc > div {
+      width: 23%; /* Four items per row */
+  }
+}
+
+/* Medium screens (2 items per row) */
+@media (max-width: 1024px) {
+  .cc > div {
+      width: 45%; /* Two items per row */
+  }
+}
+
+/* Small screens (1 item per row) */
+@media (max-width: 768px) {
+  .cc > div {
+      width: 90%; /* Full width for small screens */
+      margin: 20px 0; /* Add margin for spacing between items */
+  }
+}
+
+ul, ol {
+  list-style-type: none;
+  padding: 0;
+}
+
+b, strong {
+  font-family: 'Lucida Sans', Geneva, sans-serif;
+}
+
+mark {
+  background-color: white;
+  color: navy;
+}
+
+
+div{
+color:color-mix(in srgb, black 60%, grey 40%);
+} 
+strong{
+  color: purple;
+}
+.s{
+    float: right;
+    
+}
+.ss{
+    padding-left: 2px;
+    padding-right: 15px;
+    vertical-align: middle;
+    padding-left: 3px;
+}
+#dis {
+   font-family: cursive;
+    width: 200px;
+    height: 270px;
+    margin: 10px;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 15px;
+    animation-name: dis;
+    animation-duration: 4s;
+    animation-direction: alternate;
+    position: relative;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+    text-align: center;
+    }
+    #dis{
+        background-color: white;
+    }
+    @keyframes dis{
+        0%{color:aquamarine;  }
+        25%{color:blueviolet; }
+        50%{color:tomato;}
+        75%{color:darkgoldenrod; }
+        100%{color:darkblue;}   
+}
+span{
+    width: 200px;
+    height: 270px;
+    margin: 10px;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 15px;
+    animation-name: sp;
+    animation-delay: 2s;
+    animation-duration: 4s;
+    animation-direction: alternate;
+    position: relative;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+    text-align: center;
+    }
+    @keyframes sp{
+        0%{color:magenta  }
+        25%{color:rgb(2, 57, 2) }
+        50%{color:crimson }
+        75%{color:purple }
+        100%{color:black }
+    
+}
+
+button {
+  padding: 10px 20px;
+  margin-left: 45%;
+  font-size: 18px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+
+/* Media Queries to ensure responsiveness for all screens */
+@media (max-width: 768px) {
+  .button {
+      font-size: 16px;
+      padding: 8px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .button {
+      font-size: 14px;
+      padding: 7px 16px;
+  }
+}
+
+  input[type="search"] {
+    list-style: none;
+  }
+  #suggestions:hover{
+    display: none;
+    content-visibility:hidden;
+  }
+  
+
+.review-section {
+    width: 80%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.1);
+    border: 0.5px solid black;
+    border-radius: 10px;
+}
+.review-section p{
+  font-size: 20px;
+}
+.review-section h5{
+  font-size: 20px;
+  color: blue;
+}
+
+.review-section h4 {
+  color: purple;
+    text-align: center;
+    color: #333;
+}
+
+.review-card {
+    border-bottom: 1px solid #eee;
+    padding: 20px;
+}
+
+.review-card h5 {
+    color: #555;
+    margin: 0;
+}*
+
+.review-card .rating {
+    color: #f1c40f;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.review-card .review-text {
+    color: #666;
+    font-style: italic;
+}
+
+.review-card:last-child {
+    border-bottom: none;
+}
+
+@keyframes dis {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+.dis {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll 10s linear infinite;
+}
+@media (max-width: 768px) {
+  nav a {
+      display: block;
+      margin: 10px 0;
+  }
+  .v1 p {
+      font-size: 20px;
+  }
+}
+
+/* Footer styles */
+footer {
+  background-color: coral;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding:0px 20px;
+   
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-column {
+  flex: 1;
+  margin: 20px;
+  min-width: 150px;
+}
+
+.footer-column h4 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+  color:black;
+}
+
+.social-media li {
+  display: inline-block;
+  margin-right: 10px;
+}
+.app-links{
+  text-decoration: none;
+}
+.app-links img {
+  width: 120px;
+  margin-right: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+ 
+  padding: 15px 0;
+  margin-top: 20px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: white;
+    background-color: coral;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .footer-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .footer-column {
+    flex: 1 1 30%;
+    min-width: 200px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-column {
+    flex: 1 1 45%;
+    text-align: center;
+  }
+  
+  .app-links {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-column {
+    flex: 1 1 100%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .footer-bottom p {
+    font-size: 14px;
+    
+  }
+}
+ 

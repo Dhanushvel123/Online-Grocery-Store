@@ -1,0 +1,290 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+h1 {
+  text-shadow: 2px 2px 5px darkorange;
+  text-align: center;
+  font-size: 30px;
+  color: purple;
+}
+
+h1:hover {
+  color: crimson;
+  text-shadow: 2px 2px 4px yellow;
+}
+
+h2 {
+  background-color: purple;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+h3 {
+  color: purple;
+}
+
+a:link {
+  color: blue;
+}
+
+a:visited {
+  color: green;
+}
+
+a:hover {
+  color:darkred;
+  /* background: linear-gradient(rgb(80, 71, 40), rgb(5, 243, 5), rgb(14, 118, 159)); */
+  border-radius: 5px;
+
+}
+
+a.active {
+  padding: 12px 20px;
+  color: magenta;
+  border-radius: 10px;
+}
+
+nav {
+  background-color:transparent;
+  padding: 12px;
+  text-align: center;
+}
+
+nav a {
+  text-decoration: none;
+  background-color:transparent;
+  padding: 10px 15px;
+  font-weight: bolder;
+  font-size: 20px;
+  margin: 0 10px;
+}
+
+/* Footer styles */
+footer {
+  background-color: coral;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding:0px 20px;
+   
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-column {
+  flex: 1;
+  margin: 20px;
+  min-width: 150px;
+}
+
+.footer-column h4 {
+  font-size: 18px;
+  color:black;
+  margin-bottom: 20px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+  color: black;
+}
+
+.social-media li {
+  display: inline-block;
+  margin-right: 10px;
+}
+.app-links{
+  text-decoration: none;
+}
+.app-links img {
+  width: 120px;
+  margin-right: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+ 
+  padding: 15px 0;
+  margin-top: 20px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: white;
+    background-color: coral;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .footer-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .footer-column {
+    flex: 1 1 30%;
+    min-width: 200px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-column {
+    flex: 1 1 45%;
+    text-align: center;
+  }
+  
+  .app-links {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-column {
+    flex: 1 1 100%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .footer-bottom p {
+    font-size: 14px;
+    
+  }
+}
+.cart-container {
+  max-width: 900px;
+  margin: 2em auto;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.item-details {
+  display: flex;
+  align-items: center;
+}
+
+.item-details img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.item-quantity {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-btn,
+.remove-btn{
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0 5px;
+}
+.checkout-btn{
+background-color: purple;
+color: white;
+border: none;
+padding: 8px 10px;
+cursor: pointer;
+font-size: 16px;
+margin: 0 5px;
+}
+
+.quantity-btn:hover,
+.remove-btn:hover{
+  background-color: #45a049;
+}
+.checkout-btn:hover{
+  background-color: blue;
+}
+
+input[type="number"] {
+  width: 40px;
+  text-align: center;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.item-price {
+  font-size: 18px;
+}
+
+.cart-summary {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.cart-summary p {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+  nav a {
+      display: block;
+      margin: 5px 0;
+  }
+
+  .cart-item {
+      flex-direction: row;
+      align-items: flex-start;
+  }
+
+  .item-details {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .item-quantity {
+      margin-top: 10px;
+  }
+
+  .footer-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .footer-section {
+      text-align: center;
+  }
+}

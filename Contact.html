@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding-bottom: 80px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana;
+            background-color: #f9f9f9;
+        }
+ 
+
+        nav {
+            background-color: transparent;
+            padding: 12px;
+            text-align: center; /* Center navigation */
+        }
+
+        nav a {
+            font-size: 20px;
+            text-decoration: none;
+            background-color: transparent;
+            padding: 10px 15px;
+            font-weight: bolder;
+            color: blue;
+        }
+        a:link, a:visited {
+            color: blue;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-weight: bold;
+        }
+
+        a.active {
+            color:red;
+        }
+
+
+        nav a:hover {
+            color:cyan;
+            /* background: linear-gradient(rgb(80, 71, 40), rgb(5, 243, 5), rgb(14, 118, 159)); */
+            border-radius: 5px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: purple;
+            text-shadow: 2px 2px 5px darkorange;
+            background-color: transparent;
+        }
+
+        .contact-form {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-bottom: 20px;
+            width: 85%;
+        }
+
+        .contact-form h2 {
+            margin-bottom: 15px;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .contact-form button {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .contact-form button:hover {
+            background-color:royalblue;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .contact-info div {
+            flex: 1;
+            min-width: 250px;
+            margin: 20px;
+        }
+
+        .contact-info div i {
+            font-size: 24px;
+            color: #f9a825;
+            margin-right: 10px;
+        }
+
+        .contact-info div h3 {
+            margin-bottom: 10px;
+        }
+
+        .contact-info div p {
+            margin-bottom: 5px;
+        }
+
+        /* Feedback Section */
+        .feedback {
+            width: 65%;
+            padding: 15px;
+            margin: 0 auto 20px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 0 22px blue;
+            animation: fb 4s ease-in-out infinite reverse;
+        }
+
+        @keyframes fb {
+            0% { box-shadow: 5px 5px 10px black; }
+            50% { box-shadow: -5px -5px 5px red; }
+            75% { box-shadow: 5px 5px 15px blue; }
+            100% { box-shadow: -5px -5px 5px springgreen; }
+        }
+
+        .feedback h3 {
+            padding-left: 30px;
+        }
+
+        form {
+            padding: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: red;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1.5px solid black;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 15px;
+            font-size: 15px;
+            color: white;
+            background-color: #0056b3;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: blue;
+        }
+
+        /* Media Queries for responsiveness */
+        @media (max-width: 768px) {
+            .contact-form input, .contact-form textarea {
+                font-size: 14px;
+            }
+
+            .contact-form button {
+                font-size: 14px;
+            }
+
+            .feedback {
+                max-width: 90%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            .contact-info div {
+                text-align: center;
+                margin: 10px 0;
+            }
+
+            .contact-info div i {
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            .feedback {
+                max-width: 95%;
+            }
+        }
+     
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="Images/1 home icon.jpg" style="border-radius: 15px;" alt="" width="200px" height="130px">
+        <h1><img src="Images/contact.png" style="vertical-align: middle; position: relative;" width="25" height="22" alt=""> Contact</h1>
+
+        <nav>
+            <a href="index.html"><b><img src="Images/home icon.png" style="vertical-align:text-top;position: relative;" width="22" height="25" alt="">Home</b></a>
+            <a href="Products.html"><b><img src="Images/product icon.png"  style="vertical-align:text-top;position: relative;" width="20" height="20" alt="" alt="">Products</b></a>
+            <a href="Reg.html"><b><img src="Images/register icon.png" width="25" height="20" style="vertical-align: text-top; position: relative;">Register</b></a>
+            <a href="newlogin.html"><img src="Images/login icon.png" style="vertical-align: middle; position: relative;" width="22" height="20" alt="">Login</a>
+            <a href="Contact.html" class="active"><img src="Images/contact.png" style="vertical-align: middle; position: relative;" width="20" height="17" alt="">Contact</a>
+            <a href="cart.html"><img src="Images/cart.icon.png" style="vertical-align:text-top;position: relative;" width="27" height="22" alt="">Cart</a>
+        </nav>
+<br>
+<br>
+      
+    <div class="container">
+        <h1>Get In Touch</h1>
+
+        <!-- Contact Form Section -->
+        <div class="contact-form">
+            <h2>Message Us</h2>
+            <form action="#" method="POST">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Your email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <!-- Contact Info Section -->
+        <div class="contact-info">
+            <div>
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Our Address</h3>
+                <p>123 Medavakkam Lane, Chennai, India</p>
+            </div>
+
+            <div>
+                <i class="fas fa-phone"></i>
+                <h3>Call Us</h3>
+                <p>+123-456-7890</p>
+                <p>Mon - Sat, 9am - 6pm</p>
+            </div>
+
+            <div>
+                <i class="fas fa-envelope"></i>
+                <h3>Email Us</h3>
+                <p>support@grocerystore.com</p>
+                <p>We reply within 24 hours</p>
+            </div>
+        </div>
+
+        <!-- Feedback Section -->
+        <div class="feedback">
+            <h3>Feedback</h3>
+            <form method="post">
+                <label>UserName:</label>
+                <input type="text" placeholder="Enter Your Name" required>
+                <label for="rating">Rate this App:</label>
+                <select id="rating" name="rating" required>
+                    <option value="" disabled selected>Select rating</option>
+                    <option value="5">⭐⭐⭐⭐⭐ stars</option>
+                    <option value="4">⭐⭐⭐⭐ stars</option>
+                    <option value="3">⭐⭐⭐ stars</option>
+                    <option value="2">⭐⭐ stars</option>
+                    <option value="1">⭐ star</option>
+                </select>
+                <label>Comment:</label>
+                <textarea style="height: 50px;"></textarea>
+                <br>
+                <button type="submit" onclick="alert('Thank you so much for your Feedback')">Submit Rating</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Font Awesome for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
