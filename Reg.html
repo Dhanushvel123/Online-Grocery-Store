@@ -5,249 +5,258 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Page</title>
     <style>
-        body {
-            /* background-image: url(Images/login\ bg.png);
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-position: center;
-            background-size: cover; */
-            background-color: gainsboro;
-            font-family: Arial, sans-serif;
+        /* Global Styles */
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: url("Images/reg\ bg.png") no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
             padding: 20px;
+            color: white;
+            position: relative;
         }
 
-        h1 {
-            text-shadow: 2px 2px 4px blue;
-            color: black;
-            animation-name: sample;
-            animation-duration: 4s;
-            animation-direction: alternate;
-            animation-iteration-count: infinite;
-            animation-timing-function: ease-in-out;
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); 
+            z-index: -1;
+        }
+
+        /* Logo */
+        .bb {
             text-align: center;
-            padding-top: 20px;
-            font-size: 30px;
+            margin-bottom: 20px;
         }
 
-        @keyframes sample {
-            0% { color: crimson; }
-            25% { color: violet; }
-            50% { color: white; }
-            75% { color: magenta; }
-            100% { color: yellow; }
+        img {
+            border-radius: 15px;
+            max-width: 100%;
+            height: auto;
         }
 
-        h1:hover {
-            text-shadow: 2px 2px 4px yellow;
-            color: red;
-        }
-
+        /* Navbar */
         nav {
             background-color: white;
             padding: 12px;
             border-radius: 25px;
             box-shadow: 0 0 22px white;
-            text-align: center; /* Center nav items */
+            text-align: center;
+            width: 100%;
+            max-width: 800px;
         }
 
         nav a {
-            font-size: 20px;
+            font-size: 18px;
             text-decoration: none;
-            background-color: transparent;
-            padding: 10px 15px;
+            padding: 8px 12px;
             font-weight: bold;
             color: blue;
-            margin: 0 10px; /* Add space between links */
+            margin: 0 10px;
+            display: inline-block;
         }
+
         nav a:hover {
-  color:orangered;
-  /* background: linear-gradient(rgb(80, 71, 40), rgb(5, 243, 5), rgb(14, 118, 159)); */
-  border-radius: 5px;
-}
+            color: orangered;
+        }
+
         nav a.active {
             color: purple;
         }
 
-        .container {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
 
-h1 {
-    text-align: center;
-    color: #333;
-}
-
-.registration-form {
-    display: flex;
-    flex-direction: column;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-label {
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #555;
-}
-
-input {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-button {
-    padding: 10px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #5cb85c;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #4cae4c;
-}
-
-.signup-link {
-    text-align: center;
-    margin-top: 15px;
-}
-
-.signup-link a {
-    color: #5cb85c;
-    text-decoration: none;
-}
-/* Media Queries */
-@media (max-width: 768px) {
-    .container {
-        padding: 15px;
-        margin: 20px;
-    }
-
-    h1 {
-        font-size: 24px;
-    }
-
-    button {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 480px) {
-    input {
-        font-size: 14px;
-    }
-
-    button {
-        font-size: 12px;
-    }
-}
-        img {
-            border-radius: 15px;
-         
+        .wrapper {
+            width: 500px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(8px);
+            background: rgba(255, 255, 255, 0.1); 
+            padding: 20px;
         }
 
-        .bb {
-            text-align: center; /* Center image */
-            margin: 20px 0; /* Spacing above and below image */
+        form {
+            display: flex;
+            flex-direction: column;
         }
 
-        /* Responsive styles */
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .input-field {
+            position: relative;
+            border-bottom: 2px solid #ccc;
+            margin: 15px 0;
+        }
+
+        .input-field label {
+            position: absolute;
+            color: #fff;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            font-size: 16px;
+            pointer-events: none;
+            transition: 0.15s ease;
+        }
+
+        .input-field input,
+        .input-field textarea {
+            width: 100%;
+            height: 40px;
+            color: #fff;
+            background: transparent;
+            border: none;
+            outline: none;
+            font-size: 16px;
+        }
+
+        .input-field textarea {
+            resize: none;
+            height: 80px;
+        }
+
+        .input-field input:focus ~ label,
+        .input-field input:valid ~ label,
+        .input-field textarea:focus ~ label,
+        .input-field textarea:valid ~ label {
+            font-size: 0.8rem;
+            top: 10px;
+            transform: translateY(-120%);
+        }
+
+        button {
+            background: #fff;
+            color: #000;
+            font-weight: 600;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            border-radius: 3px;
+            font-size: 16px;
+            border: 2px solid transparent;
+            transition: 0.3s ease;
+        }
+
+        .register {
+            text-align: center;
+            margin-top: 20px;
+            color: #fff;
+        }
+
+        .register a {
+            color: #efefef;
+            text-decoration: underline;
+        }
+
+        /* Media Queries */
         @media (max-width: 768px) {
-            h1 {
-                font-size: 24px; /* Smaller font on mobile */
+            .wrapper {
+                width: 90%;
+                padding: 15px;
             }
 
-            form {
-                width: 90%; /* Wider form on smaller screens */
-                padding: 15px; /* Adjust padding */
+            h2 {
+                font-size: 1.8rem;
             }
 
-            nav a {
-                margin: 0 5px; /* Adjust spacing for mobile */
-                padding: 8px; /* Adjust padding */
+            button {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .wrapper {
+                width: 100%;
+                padding: 10px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            input, textarea {
+                font-size: 14px;
+            }
+
+            button {
+                font-size: 12px;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Logo -->
     <div class="bb">
-        <img src="Images/loggo.jpg" alt="Logo" width="300" height="150">
+        <img src="Images/loggo.jpg" alt="Logo" width="200" height="100">
     </div>
-    
-    <h1>
-        <img src="Images/register icon.png" width="35" height="30" style="vertical-align: text-top; padding-bottom: 20px; position: relative;">Register
-    </h1>
-    
+
+    <!-- Navigation Bar -->
     <nav>
-        <a href="zepto.html"><img src="Images/home icon.png" style="vertical-align:text-top;position: relative;" width="22" height="25" alt="">Home</a>
-        <a href="Products.html"><img src="Images/product icon.png"  style="vertical-align:text-top;position: relative;" width="25" height="20" alt="" alt="">Products</a>
-        <a href="Reg.html" class="active"><img src="Images/register icon.png" width="22" height="25" style="vertical-align: text-top;position: relative;">Register</a>
-        <a href="newlogin.html"><img src="Images/login icon.png" style="vertical-align: middle; position: relative;" width="22" height="20" alt="">Login</a>
-        <a href="Contact.html"><img src="Images/contact.png" style="vertical-align: middle; position: relative;" width="20" height="17" alt="">Contact</a>
-        <a href="cart.html"><img src="Images/cart.icon.png" style="vertical-align:text-top;position: relative;" width="27" height="22" alt="">Cart</a>
+        <a href="index.html">Home</a>
+        <a href="Products.html">Products</a>
+        <a href="Reg.html" class="active">Register</a>
+        <a href="newlogin.html">Login</a>
+        <a href="Contact.html">Contact</a>
+        <a href="cart.html">Cart</a>
     </nav>
 
-    <div class="container">
-        <h2>Register Form</h2>
-        <form class="registration-form">
-            <div class="form-group">
-                <label for="name"><img class="user" src="Images/usericon1.jpg" alt="User Icon" width="23" height="23" style="vertical-align: bottom;">Full Name:</label>
-                <input type="text" id="name" name="name" placeholder="Enter Your Name"  required>
+    <div class="wrapper">
+        <form action="#">
+            <h2>Register</h2>
+            <div class="input-field">
+                <input type="text" name="name" required>
+                <label>Full Name</label>
             </div>
-            <div class="form-group">
-                <label for="email"><svg xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;" width="16" height="16" fill="currentColor" class="bi bi-envelope-at-fill" viewBox="0 0 16 16">
-                    <path d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2zm-2 9.8V4.698l5.803 3.546zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.5 4.5 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586zM16 9.671V4.697l-5.803 3.546.338.208A4.5 4.5 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671"/>
-                    <path d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791"/>
-                  </svg> Email:</label>
-                <input type="email" id="email" name="email" placeholder="Enter your E-mail" required>
+            <div class="input-field">
+                <input type="email" name="email" required>
+                <label>Email</label>
             </div>
-            <div class="form-group">
-                <label for="password"> <img class="pass" src="Images/passwordicon.png" alt="Password Icon" width="22" height="20" style="vertical-align: bottom;">Password:</label>
-                <input type="password" id="password" name="password" placeholder="✱✱✱✱✱✱" required>
+            <div class="input-field">
+                <input type="password" name="password" required>
+                <label>Password</label>
             </div>
-            <div class="form-group">
-                <label for="confirm-password">Confirm Password:</label>
-                <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter to confirm password" required>
+            <div class="input-field">
+                <input type="password" name="confirm-password" required>
+                <label>Confirm Password</label>
             </div>
-            <div class="form-group">
-                <label for="address"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
-                  </svg>Address:</label>
-                <input type="text" id="address" name="address" placeholder="Enter your Location" required>
+            <div class="input-field">
+                <input type="tel" name="phone" required>
+                <label>Phone Number</label>
             </div>
-            <div class="form-group">
-                <label for="phone"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
-                  </svg>Phone Number:</label>
-                <input type="tel" id="phone" name="phone" placeholder="Enter your Mobile Number" required>
+            <div class="input-field">
+                <textarea name="address" required></textarea>
+                <label>Address</label>
             </div>
-            <button type="submit" style="cursor: pointer; width: 35%;margin-left: 35%;"  onclick="alert('Successfully submitted');">Register</button>
-        </form>
-        <br>
-        <div class="button-container">
-            <p class="signup-link">Don't have already registered? <a href="newlogin.html">Login</a></p>
-        </div>
-    </div>
+            <button type="submit">Register</button>
 
-    <center>
+            <div class="register">
+                <p>Already have an account? <a href="newlogin.html">Login</a></p>
+            </div>
+        </form>
+    </div>
+    <!-- Footer -->
+    <footer>
         <hr>
-        <h3>@copyrights2024</h3>
+        <h3>© Copyrights 2024</h3>
         <hr>
-    </center>
+    </footer>
 </body>
 </html>
